@@ -83,3 +83,10 @@ git push --set-upstream origin dev
 
 `docker image ls`
 
+```
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+jdk-9-alpine        latest              6adf085ab630        4 seconds ago       356MB
+jdk-9-debian-slim   latest              f68e97e4f78f        15 minutes ago      400MB
+debian              stable-slim         d30525fb4ed2        10 days ago         55.3MB
+alpine              3.6                 76da55c8019d        5 weeks ago         3.97MB
+```
