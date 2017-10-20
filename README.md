@@ -101,7 +101,14 @@ alpine              3.6                 76da55c8019d        5 weeks ago         
 ```
 ./mvnw package
 ```
-or
+
+[helloworld-jdk-9.Dockerfile](helloworld-java-9/jdk-9-alpine.Dockerfile)
+
 ```
-docker container run --volume d:/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/helloworld-java-9 --workdir /helloworld-java-9 -it --rm openjdk:9-jdk-slim ./mvnw package
+# Hello world application with JDK 9 and Debian slim
+FROM jdk-9-debian-slim
+COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.jar
+# Set up env variables
+CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
+  -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
 ```
