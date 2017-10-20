@@ -103,5 +103,5 @@ alpine              3.6                 76da55c8019d        5 weeks ago         
 ```
 or
 ```
-docker container run --volume $PWD:/helloworld-java-9 --workdir /helloworld-java-9 -it --rm openjdk:9-jdk-slim ./mvnw package
+docker container run --volume d:/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/helloworld-java-9 --workdir /helloworld-java-9 -it --rm openjdk:9-jdk-slim ./mvnw package
 ```
