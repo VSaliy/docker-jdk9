@@ -112,3 +112,6 @@ COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.
 CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
   -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
 ```
+
+Run the jdeps tool to see what modules the application depends on:
+`docker container run -it --rm helloworld-jdk-9 jdeps --list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar`
