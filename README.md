@@ -70,3 +70,16 @@ CMD ["jshell", "-J-XX:+UnlockExperimentalVMOptions", \
                "-R-XX:+UnlockExperimentalVMOptions", \
                "-R-XX:+UseCGroupMemoryLimitForHeap"]
 ```
+
+```
+git add .
+git commit -m "JDK 9 and Alpine Linux"
+git push --set-upstream origin dev
+```
+
+`curl -LO http://download.java.net/java/jdk9-alpine/archive/181/binaries/jdk-9-ea+181_linux-x64-musl_bin.tar.gz`
+
+`docker image build -t jdk-9-alpine -f jdk-9-alpine.Dockerfile .`
+
+`docker image ls`
+
