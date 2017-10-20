@@ -93,3 +93,6 @@ debian              stable-slim         d30525fb4ed2        10 days ago         
 alpine              3.6                 76da55c8019d        5 weeks ago         3.97MB
 ```
 ### Create a Docker Image using JDK 9 and a Java application
+
+`git submodule add https://github.com/PaulSandoz/helloworld-java-9.git`
+
