@@ -1,5 +1,7 @@
 # Build a Docker Image with JDK 9
 
+### Create a Docker Image using JDK 9
+
 Create a new directory 'docker-jdk9'
 
 ```
@@ -50,7 +52,7 @@ debian              stable-slim         d30525fb4ed2        10 days ago         
 jshell> Runtime.getRuntime().maxMemory() / (1 << 20)
 $1 ==> 100
 ```
-
+### Create a Docker Image using JDK 9 and Alpine Linux
 
 Create a new text file [jdk-9-alpine.Dockerfile](jdk-9-alpine.Dockerfile)
 
@@ -90,3 +92,4 @@ jdk-9-debian-slim   latest              f68e97e4f78f        15 minutes ago      
 debian              stable-slim         d30525fb4ed2        10 days ago         55.3MB
 alpine              3.6                 76da55c8019d        5 weeks ago         3.97MB
 ```
+### Create a Docker Image using JDK 9 and a Java application
