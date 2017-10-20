@@ -102,7 +102,7 @@ alpine              3.6                 76da55c8019d        5 weeks ago         
 ./mvnw package
 ```
 
-[helloworld-jdk-9.Dockerfile](helloworld-java-9/jdk-9-alpine.Dockerfile)
+[helloworld-jdk-9.Dockerfile](helloworld-java-9/helloworld-jdk-9.Dockerfile)
 
 ```
 # Hello world application with JDK 9 and Debian slim
