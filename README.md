@@ -96,8 +96,12 @@ alpine              3.6                 76da55c8019d        5 weeks ago         
 
 `git submodule add https://github.com/VSaliy/helloworld-java-9.git`
 
-`helloworld-java-9`
+`cd helloworld-java-9`
 
+```
+./mvnw package
+```
+or
 ```
 docker container run --volume $PWD:/helloworld-java-9 --workdir /helloworld-java-9 -it --rm openjdk:9-jdk-slim ./mvnw package
 ```
