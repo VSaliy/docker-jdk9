@@ -4,18 +4,10 @@ Create a new directory 'docker-jdk9'
 
 ```
 git init
-git add .
-git commit -m "Init commit"
-```
-Create a new text file jdk-9-debian-slim.Dockerfile
-
-```
-git add .
-git commit -m "Init commit add files"
 git remote add origin https://github.com/VSaliy/docker-jdk9.git
-git push origin master
+git checkout -b dev
 ```
-Edit text file [jdk-9-debian-slim.Dockerfile](jdk-9-debian-slim.Dockerfile)
+Create a new text file [jdk-9-debian-slim.Dockerfile](jdk-9-debian-slim.Dockerfile)
 
 ```
 # A JDK 9 with Debian slim
@@ -30,6 +22,12 @@ CMD ["jshell", "-J-XX:+UnlockExperimentalVMOptions", \
                "-J-XX:+UseCGroupMemoryLimitForHeap", \
                "-R-XX:+UnlockExperimentalVMOptions", \
                "-R-XX:+UseCGroupMemoryLimitForHeap"]
+```
+
+```
+git add .
+git commit -m "start commit"
+git push --set-upstream origin dev
 ```
 
 `curl -LO http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz`
