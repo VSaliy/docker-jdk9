@@ -94,5 +94,5 @@ alpine              3.6                 76da55c8019d        5 weeks ago         
 ```
 ### Create a Docker Image using JDK 9 and a Java application
 
-`git submodule add https://github.com/PaulSandoz/helloworld-java-9.git`
+`git submodule add https://github.com/VSaliy/helloworld-java-9.git`
 
