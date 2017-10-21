@@ -1,5 +1,11 @@
 # Build a Docker Image with JDK 9
 
+Table of Contents
+
+[Create a Docker Image using JDK 9](https://github.com/VSaliy/docker-jdk9/tree/dev#create-a-docker-image-using-jdk-9)
+[Create a Docker Image using JDK 9 and Alpine Linux](https://github.com/VSaliy/docker-jdk9/tree/dev#create-a-docker-image-using-jdk-9-and-alpine-linux)
+[Create a Docker Image using JDK 9 and a Java application](https://github.com/VSaliy/docker-jdk9/tree/dev#create-a-docker-image-using-jdk-9-and-a-java-application)
+
 ### Create a Docker Image using JDK 9
 
 Create a new directory 'docker-jdk9'
@@ -121,6 +127,8 @@ CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
 Run the jdeps tool to see what modules the application depends on:
 
 `docker container run -it --rm helloworld-jdk-9 jdeps --list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar`
+
+### Reduce the size of a Docker Image using JDK 9 and a Java application
 
 `docker run --rm --volume //d/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/out jdk-9-debian-slim jlink --module-path /opt/jdk-9/jmods --verbose --add-modules java.base --compress 2 --no-header-files --output /out/target/openjdk-9-base_linux-x64`
 
