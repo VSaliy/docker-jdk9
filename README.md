@@ -134,7 +134,9 @@ Run the jdeps tool to see what modules the application depends on:
 
 ### Reduce the size of a Docker Image using JDK 9 and a Java application
 
-`docker run --rm --volume //d/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/out jdk-9-debian-slim jlink --module-path /opt/jdk-9/jmods --verbose --add-modules java.base --compress 2 --no-header-files --output /out/target/openjdk-9-base_linux-x64`
+```
+docker run --rm --volume //d/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/out jdk-9-debian-slim jlink --module-path /opt/jdk-9/jmods --verbose --add-modules java.base --compress 2 --no-header-files --output /out/target/openjdk-9-base_linux-x64
+```
 
 [helloworld-jdk-9-base.Dockerfile](https://github.com/VSaliy/helloworld-java-9/blob/master/helloworld-jdk-9-base.Dockerfile)
 
