@@ -1,3 +1,5 @@
+[Build a Docker Image with JDK 9](https://github.com/docker/labs/blob/master/developer-tools/java/chapters/ch03-build-image-java-9.adoc)
+
 # Build a Docker Image with JDK 9
 
 Table of Contents
