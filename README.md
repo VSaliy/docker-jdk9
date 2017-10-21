@@ -3,8 +3,12 @@
 Table of Contents
 
 [Create a Docker Image using JDK 9](https://github.com/VSaliy/docker-jdk9/tree/dev#create-a-docker-image-using-jdk-9)
+
 [Create a Docker Image using JDK 9 and Alpine Linux](https://github.com/VSaliy/docker-jdk9/tree/dev#create-a-docker-image-using-jdk-9-and-alpine-linux)
+
 [Create a Docker Image using JDK 9 and a Java application](https://github.com/VSaliy/docker-jdk9/tree/dev#create-a-docker-image-using-jdk-9-and-a-java-application)
+
+[Reduce the size of a Docker Image using JDK 9 and a Java application](https://github.com/VSaliy/docker-jdk9/tree/dev#reduce-the-size-of-a-docker-image-using-jdk-9-and-a-java-application)
 
 ### Create a Docker Image using JDK 9
 
