@@ -99,6 +99,9 @@ alpine              3.6                 76da55c8019d        5 weeks ago         
 `cd helloworld-java-9`
 
 ```
+docker container run --volume //d/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/helloworld-java-9 --workdir /helloworld-java-9 -it --rm openjdk:9-jdk-slim ./mvnw package
+```
+```
 ./mvnw package
 ```
 
@@ -113,5 +116,12 @@ CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
   -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
 ```
 
+`docker image build -t helloworld-jdk-9 -f helloworld-jdk-9.Dockerfile .`
+
 Run the jdeps tool to see what modules the application depends on:
+
 `docker container run -it --rm helloworld-jdk-9 jdeps --list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar`
+
+`docker run --rm --volume //d/dev/src/IdeaProjects/docker-jdk9/helloworld-java-9:/out jdk-9-debian-slim jlink --module-path /opt/jdk-9/jmods --verbose --add-modules java.base --compress 2 --no-header-files --output /out/target/openjdk-9-base_linux-x64`
+
+[helloworld-jdk-9-base.Dockerfile](https://github.com/VSaliy/helloworld-java-9/blob/master/helloworld-jdk-9-base.Dockerfile)
